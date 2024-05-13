@@ -23,7 +23,12 @@ PDF Combiner is a web application that allows users to upload multiple PDF files
 
 ## Installation
 
-1. Clone the repository:
+ - Clone the repository:
 
    ```bash
    git clone https://github.com/enoch2-hub/Pdf_Combiner.git
+
+
+## Acknowledgements
+ - pdf-lib: JavaScript library for working with PDF files.
+ - Create React App: Boilerplate for React projects.
