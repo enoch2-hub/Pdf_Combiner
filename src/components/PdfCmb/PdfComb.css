@@ -1,0 +1,100 @@
+.pdf-combiner {
+  margin: 0 auto;
+  width: 80%;
+  height: max-content;
+  padding: 20px;
+  background: linear-gradient(to right bottom, #ff6b81, #ff7f50);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdf-combiner > header > h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+
+  animation: text 0.5s ease-in-out;
+
+  @keyframes text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 200px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 100px) {
+    font-size: 0.6rem;
+  }
+
+  @media screen and (max-width: 50px) {
+    font-size: 0.4rem;
+  }
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-input {
+  margin-top: 20rem;
+  margin-right: 10px;
+}
+
+.combine-button {
+  background-color: #f9ca24;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.combine-button:hover {
+    background-color: #0056b3;
+  }
+  
+.pdf-preview {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .pdf-combiner {
+    padding: 10px;
+  }
+}
