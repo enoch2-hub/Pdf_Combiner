@@ -1,106 +1,122 @@
 .pdf-combiner {
-  margin: 0 auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  width: 80%;
-  height: max-content;
-  padding: 20px;
-  background: linear-gradient(to right bottom, #ff6b81, #ff7f50);
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-@media screen and (max-width: 1000px) {
-  .pdf-combiner {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .pdf-combiner {
-    width: 100%;
-  }
+header {
+  margin-bottom: 30px;
+  background-color: #0056b3;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
 }
 
-.pdf-combiner > header > h1 {
-  color: white;
-  margin-bottom: 20px;
-  font-size: 5rem;
+h1 {
+  color: #e4e4e4;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 40px;
   text-align: center;
-  text-transform: uppercase;
-
-  letter-spacing: 0.1em;
-
-  animation: text 0.5s ease-in-out;
-
-  @keyframes text {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    font-size: 4rem;
-  }
-
-  @media screen and (max-width: 700px) {
-    font-size: 3rem;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 2rem;
-  }
-}
-
-.header {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.file-upload {
+  cursor: pointer;
+  width: 80%;
+  max-width: 600px;
   margin-bottom: 20px;
+  position: relative;
+  /* Needed for absolute positioning of text */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+.drop-zone.drag-active {
+  border-color: #007bff;
+  background-color: #e6f2ff;
+}
+
+.drop-zone-text {
+  font-size: 1.2em;
+  color: #666;
+  display: block;
+  /* Make it a block element to fill the label */
+  padding: 20px;
+  /* Add some padding to the text */
+}
+
+.drop-zone.drag-active .drop-zone-text {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Hide the default file input but keep it accessible */
 .file-input {
-  margin-top: 5rem;
-  margin-right: 10px;
+  display: none;
 }
 
 .combine-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 1rem;
-  }
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
 .combine-button:hover {
-    background-color: #0056b3;
-  }
-.combine-button:active {
-    background-color: #001a35;
-  }
-  
-.pdf-preview {
+  background-color: #0056b3;
+}
+
+.file-list {
   margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.file-list h3 {
+  margin-top: 0;
+  color: #555;
+}
+
+.file-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.pdf-preview {
+  margin-top: 30px;
   width: 100%;
-  height: 600px;
+  max-width: 800px;
+  /* Adjust as needed */
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-preview iframe {
+  border: none;
 }
 
 footer {
-  margin-top: 20px;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9em;
   text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-  .pdf-combiner {
-    padding: 10px;
-  }
 }
