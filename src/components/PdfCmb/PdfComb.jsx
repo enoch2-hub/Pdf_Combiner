@@ -111,7 +111,7 @@ const PdfComb = () => {
       </div>
       <footer>
         <p>© 2024 Pdf Combiner. All rights reserved.</p>
-        <p>~Enoch~</p>
+        <p>~Enoch</p>
       </footer>
     </div>
   );
